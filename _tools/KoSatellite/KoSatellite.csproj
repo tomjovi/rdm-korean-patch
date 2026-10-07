@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyName>Devolutions.Resources</AssemblyName>
+    <RootNamespace>Devolutions.Resources</RootNamespace>
+    <Version>2026.3.10.0</Version>
+    <AssemblyVersion>2026.3.10.0</AssemblyVersion>
+    <FileVersion>2026.3.10.0</FileVersion>
+    <AssemblyCulture>ko</AssemblyCulture>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\*.resources">
+      <LogicalName>%(Filename)%(Extension)</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

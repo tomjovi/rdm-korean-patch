@@ -1,0 +1,45 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# .NET build outputs
+**/bin/
+**/obj/
+_tools/KoSatellite/Resources/
+_tools/KoSatellite/bin_smoke/
+_tools/KoSatellite/bin_smoke2/
+
+# Local build output (deploy/ keeps the release DLL)
+ko/
+*.bak
+*.bak_*
+
+# Translation worklogs / temp
+_extract/en/
+_extract/*.txt
+_extract/*.tsv
+_tmp*/
+_sat_builder/
+__pycache__/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+*.user
+*.suo
+
+# Secrets / local RDM data — never commit
+*.cfg
+*.rdm
+Connections.log
+*.log.db
+WebView2.Cache/
+*.token
+.env
+.env.*

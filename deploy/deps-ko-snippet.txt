@@ -1,0 +1,4 @@
+﻿# Optional: add under Devolutions.Resources resources{} in *.deps.json
+"ko/Devolutions.Resources.resources.dll": {
+  "locale": "ko"
+}

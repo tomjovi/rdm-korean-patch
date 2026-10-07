@@ -1,4 +1,6 @@
-﻿# Optional: add under Devolutions.Resources resources{} in *.deps.json
+﻿# (선택) *.deps.json 의 "resources" { ... } 안에 추가하세요.
+# 대상 예: Devolutions.Resources.deps.json / RemoteDesktopManager.deps.json
+# 기존 항목이 있으면 쉼표(,)로 구분하세요. 대부분의 경우 ko 폴더만으로도 동작합니다.
 "ko/Devolutions.Resources.resources.dll": {
   "locale": "ko"
 }

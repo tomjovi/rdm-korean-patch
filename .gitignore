@@ -12,8 +12,8 @@ _tools/KoSatellite/Resources/
 _tools/KoSatellite/bin_smoke/
 _tools/KoSatellite/bin_smoke2/
 
-# Local build output (deploy/ keeps the release DLL)
-ko/
+# Local build output at repo root only (keep deploy/ko and _extract/ko)
+/ko/
 *.bak
 *.bak_*
 

@@ -34,6 +34,10 @@ Desktop.ini
 *.user
 *.suo
 
+# Release packaging (uploaded via gh release, not committed)
+*.zip
+rdm-korean-patch-*.zip
+
 # Secrets / local RDM data — never commit
 *.cfg
 *.rdm

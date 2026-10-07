@@ -22,19 +22,44 @@ RDM 설치 프로그램 전체가 아니라, **한국어 위성(satellite) DLL**
 
 ---
 
+## 다운로드 (일반 사용자)
+
+소스 전체를 clone 할 필요 없습니다. **GitHub Releases** 에서 zip만 받으면 됩니다.
+
+1. [Releases 페이지](https://github.com/tomjovi/rdm-korean-patch/releases) 로 이동합니다.
+2. 최신(또는 사용 중인 RDM 버전에 맞는) 릴리스를 엽니다.  
+   예: [v2026.3.10.0](https://github.com/tomjovi/rdm-korean-patch/releases/tag/v2026.3.10.0)
+3. **Assets** 에서 `rdm-korean-patch-2026.3.10.0.zip` 을 다운로드합니다.
+4. 압축을 풀면 `ko/Devolutions.Resources.resources.dll` 과 `INSTALL.txt` 가 있습니다.
+
+직접 링크(최신 파일이 바뀌면 Releases에서 확인):
+
+```text
+https://github.com/tomjovi/rdm-korean-patch/releases/latest
+```
+
+개발·번역 기여용으로 전체 소스가 필요하면 아래처럼 clone 하면 됩니다.
+
+```powershell
+git clone https://github.com/tomjovi/rdm-korean-patch.git
+```
+
+---
+
 ## 사용자용: 한국어 패치 적용하기
 
 RDM을 **직접 설치·보유**하신 분만 적용하세요. 이 저장소에는 RDM 본체가 없습니다.
 
 ### 1) 준비
 
-1. RDM을 **완전히 종료**합니다. (트레이 아이콘까지 종료)
-2. RDM 설치(또는 포터블) 폴더를 찾습니다.  
+1. 위에서 zip을 받아 압축을 해제합니다.
+2. RDM을 **완전히 종료**합니다. (트레이 아이콘까지 종료)
+3. RDM 설치(또는 포터블) 폴더를 찾습니다.  
    `Devolutions.Resources.dll` 파일이 있는 폴더가 루트입니다.
 
 ### 2) DLL 복사
 
-이 저장소의 배포 DLL을 RDM 루트 아래 `ko` 폴더에 넣습니다.
+압축 해제한 `ko` 폴더(또는 그 안의 DLL)를 RDM 루트 아래에 넣습니다.
 
 ```text
 (RDM 루트)/
@@ -46,11 +71,13 @@ RDM을 **직접 설치·보유**하신 분만 적용하세요. 이 저장소에�
   ...
 ```
 
-복사할 파일:
+zip 안 경로:
 
 ```text
-deploy/ko/Devolutions.Resources.resources.dll
+ko/Devolutions.Resources.resources.dll
 ```
+
+(저장소를 clone 한 경우) 동일한 파일은 `deploy/ko/` 에도 있습니다.
 
 ### 3) (선택) deps.json 등록
 

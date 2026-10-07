@@ -35,6 +35,13 @@ $resDir = Join-Path $Root "_tools\KoSatellite\Resources"
 $outKo = Join-Path $Root "ko"
 New-Item -ItemType Directory -Force -Path $resDir, $outKo | Out-Null
 
+$satProj = Join-Path $Root "_tools\KoSatellite\KoSatellite.csproj"
+# Keep About / Product Version labels in sync with KoSatellite Version
+$pyStamp = Join-Path $Root ".venv\Scripts\python.exe"
+if (-not (Test-Path $pyStamp)) { $pyStamp = "python" }
+& $pyStamp (Join-Path $Root "_stamp_patch_version.py")
+if ($LASTEXITCODE -ne 0) { throw "Failed to stamp patch version into UIResources" }
+
 # Ensure ResWriter
 $rwProj = Join-Path $Root "_tools\ResWriter\ResWriter.csproj"
 $rwOut = Join-Path $Root "_tools\ResWriter\bin"
@@ -55,8 +62,6 @@ foreach ($m in $map) {
   & $dotnet exec $rwDll $src $dst
   if ($LASTEXITCODE -ne 0) { throw "ResWriter failed for $($m.Json)" }
 }
-
-$satProj = Join-Path $Root "_tools\KoSatellite\KoSatellite.csproj"
 $satOut = Join-Path $Root "_tools\KoSatellite\bin"
 & $dotnet build $satProj -c Release -o $satOut | Out-Host
 if ($LASTEXITCODE -ne 0) { throw "Satellite build failed" }

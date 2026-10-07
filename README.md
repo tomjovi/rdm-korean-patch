@@ -12,7 +12,7 @@ RDM 설치 프로그램 전체가 아니라, **한국어 위성(satellite) DLL**
 
 | 항목 | 내용 |
 |------|------|
-| 대상 버전 | Remote Desktop Manager **win-x64 2026.3.10.0** (패치 **2026.3.10.1**) |
+| 대상 버전 | Remote Desktop Manager **win-x64 2026.3.10.0** (패치 **2026.3.10.2**) |
 | 배포물 | `deploy/ko/Devolutions.Resources.resources.dll` |
 | 번역 원본 | `_extract/ko/*.ko.json` (Log / Msg / UI) |
 | 재빌드 | .NET 8 SDK + `_build_ko.ps1` |
@@ -28,8 +28,8 @@ RDM 설치 프로그램 전체가 아니라, **한국어 위성(satellite) DLL**
 
 1. [Releases 페이지](https://github.com/tomjovi/rdm-korean-patch/releases) 로 이동합니다.
 2. 최신(또는 사용 중인 RDM 버전에 맞는) 릴리스를 엽니다.  
-   예: [v2026.3.10.1](https://github.com/tomjovi/rdm-korean-patch/releases/tag/v2026.3.10.1)
-3. **Assets** 에서 `rdm-korean-patch-2026.3.10.1.zip` 을 다운로드합니다.
+   예: [v2026.3.10.2](https://github.com/tomjovi/rdm-korean-patch/releases/tag/v2026.3.10.2)
+3. **Assets** 에서 `rdm-korean-patch-2026.3.10.2.zip` 을 다운로드합니다.
 4. 압축을 풀면 `ko/Devolutions.Resources.resources.dll` 과 `INSTALL.txt` 가 있습니다.
 
 직접 링크(최신 파일이 바뀌면 Releases에서 확인):
@@ -95,7 +95,9 @@ ko/Devolutions.Resources.resources.dll
 
 1. RDM을 실행합니다.
 2. 설정에서 UI 언어를 **한국어(ko)** 로 선택하거나, Windows 표시 언어가 한국어인지 확인합니다.
-3. 메뉴·메시지·로그가 한글로 보이면 성공입니다.
+3. 메뉴·메시지·로그가 한글로 보이면 성공입니다.  
+   패치 버전은 **도움말 → 소개**의 저작권 줄, 또는 **제품 버전** 라벨에  
+   `한국어 패치 2026.3.10.2` / `KO 패치 2026.3.10.2` 형태로 표시됩니다.
 
 ### 롤백
 
